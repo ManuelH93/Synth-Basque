@@ -1,4 +1,13 @@
 #######################################################################
+# Guidelines
+#######################################################################
+
+# Two placebo tests are built into the code with directions on how to
+# implement them. One on the iterative removal of specific control
+# states and one on time placebos. Search for the terms "iterative
+# removal" and "time placebo".
+
+#######################################################################
 # Preparation
 #######################################################################
 
@@ -72,7 +81,7 @@ for (i in c(2:18)){ ##time placebo and ##iterative removal of selected
     time.variable = "year",
     treatment.identifier = i,
     controls.identifier = x[!x %in% i],
-    time.optimize.ssr = 1960:1969, ##time placebo: change to 1955:1964
+    time.optimize.ssr = 1960:1969, ##time placebo: change to 1960:1964
     time.plot = 1955:1997)
   
   # View data
